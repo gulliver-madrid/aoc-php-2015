@@ -1,7 +1,8 @@
 <?php
-$file = fopen('./data/01/input.txt', 'r');
-$line = fgets($file);
-fclose($file);
+
+require_once 'src/helpers.php';
+
+$line = readOneLine('01/input.txt');
 
 $c = 0;
 foreach (str_split($line) as $char) {
