@@ -9,7 +9,7 @@ if ($lines === false) {
 
 $paper = 0;
 foreach ($lines as $line_num => $line) {
-    $measures = explode('x', trim($line));
+    $measures = parseMeasures(trim($line));
     [$a, $b, $c] = $measures;
     $smallest = removeMax($measures);
     [$e, $f] = $smallest;
