@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once 'src/02/a.php';
+require_once 'src/02/shared.php';
 
 class RemoveMaxTest extends TestCase
 {

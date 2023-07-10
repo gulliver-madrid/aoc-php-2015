@@ -13,7 +13,7 @@ foreach ($lines as $line_num => $line) {
     [$a, $b, $c] = $measures;
     $smallest = removeMax($measures);
     [$e, $f] = $smallest;
-    $needed = 2 * ($a * $b) + 2 * ($a * $c) + 2 * ($b * $c) + $e * $f;
+    $needed = 2 * $e + 2 * $f + $a * $b * $c;
     $paper += $needed;
 }
 echo $paper;
