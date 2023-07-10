@@ -37,3 +37,17 @@ function readLines($path)
     }
     return $lines;
 }
+
+/**
+ * Asserts that an array has a specific count.
+ *
+ * @param array<mixed> $array The array to assert the count on.
+ * @param int $expectedCount The expected count of elements in the array.
+ * @return void
+ * @throws AssertionError If the array count is not equal to the expected count.
+ */
+function assertCount(array $array, int $expectedCount): void
+{
+    $actualCount = count($array);
+    assert($actualCount === $expectedCount, "Array count mismatch. Expected: $expectedCount, Actual: $actualCount");
+}
