@@ -1,11 +1,10 @@
 <?php
 
+require_once 'src/helpers.php';
 require_once 'shared.php';
 
-$lines = file('data/02/input.txt');
-if ($lines === false) {
-    throw new Exception("No se pudo leer el contenido del archivo");
-}
+$path = 'data/02/input.txt';
+$lines = readLines($path);
 
 $paper = 0;
 foreach ($lines as $line_num => $line) {
